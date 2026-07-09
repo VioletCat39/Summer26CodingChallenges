@@ -7,6 +7,8 @@ ASCII_UPPER_MAX = 90
 ASCII_UPPER_MIN = 65
 ASCII_LOWER_MAX = 122
 ASCII_LOWER_MIN = 97
+NUMBER_SET = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
+ALLOWED_SPECIAL_CHARACTERS = {'!', '@', '#', '$', '%', '^', '&', '(', ')', ',', '.', '?', '_', '-', '+', '=', '\'', '\"', '<', '>', '|', '/', '\\', '*', ':', ';', '{', '}', '[', ']'}
 
 def get_array(password):
     """
@@ -36,26 +38,56 @@ def has_numeric(password):
     """
     Checks the parsed password to see if it has a number
     """
+    for letter in password:
+        if letter in NUMBER_SET:
+            return True
+    return False
+    
 
 def has_special(password):
     """
     Checks to see if the password has a special character
     """
+    for letter in password:
+        if letter in ALLOWED_SPECIAL_CHARACTERS:
+            return True
+    return False
 
 def recurrence_limit(password):
     """
     Checks to see if the password has 3 or more of the same character in a row
     """
+    letter_second_previous = ''
+    letter_previous = ''
+
+    for letter in password:
+        if (letter == letter_previous) and (letter == letter_second_previous):
+            return True
+        letter_second_previous = letter_previous
+        letter_previous = letter
+
+    return False
 
 def size_checker(password):
     """
     Checks to see if the password is in an acceptable size range (8 to 32)
     """
+    length = len(password)
+    if length >= 8:
+        if length <=32:
+            return True
+        
+    return False
 
 def above_ten_characters(password):
     """
     Checks to see if the password is above ten characters
     """
+    length = len(password)
+    if length >= 10:
+        return True
+        
+    return False
 
 def get_strength(password):
     """
@@ -83,8 +115,11 @@ def main():
     """
     password_strength = 0
     password = input("Please enter password: ")
-
-    print(get_strength(password))
+    password_length = get_array(password)
+    if size_checker(password) != True:
+        print("Invalid Password!")
+    else:
+        print(get_strength(password))
     print("Error! Code not yet complete!")
 
 if __name__ == "__main__":
