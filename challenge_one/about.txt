@@ -1,0 +1,21 @@
+The first challenge is to create a password checker to see how strong it is!
+
+The test parameters I am setting for myself are the following:
+
+The password will be rated on a score from 0 to 5
+One point if the password is over 10 characters
+Another point if the password has both lowercase and uppercase characters
+Another point if there is at least one digit
+A point if there is at least one special character
+And one point if all four.
+Minus one point if there are more than two of the same character in a row
+
+From the numeric score, the following output is given:
+0: Very bad password
+1: Poor Password
+2: Weak Password
+3: Okay Password
+4: Good Password
+5: Strong Password
+
+And that's it for this challenge!
