@@ -18,11 +18,19 @@ def has_uppercase(password):
     """
     Checks the parsed password for an uppercase character
     """
-
+    for letter in password:
+        if (ord(letter) >= ASCII_UPPER_MIN) and (ord(letter) <= ASCII_UPPER_MAX):
+            return True
+    return False
+    
 def has_lowercase(password):
     """
     Checks the parsed password for an lowercase character
     """
+    for letter in password:
+        if (ord(letter) >= ASCII_LOWER_MIN) and (ord(letter) <= ASCII_LOWER_MAX):
+            return True
+    return False
 
 def has_numeric(password):
     """
@@ -34,7 +42,7 @@ def has_special(password):
     Checks to see if the password has a special character
     """
 
-def recurrence_limiter(password):
+def recurrence_limit(password):
     """
     Checks to see if the password has 3 or more of the same character in a row
     """
@@ -49,10 +57,34 @@ def above_ten_characters(password):
     Checks to see if the password is above ten characters
     """
 
+def get_strength(password):
+    """
+    Helper function to calculate password strength as a numeric value from previous tests
+    """
+    score = 0
+    if has_lowercase(password) and has_uppercase(password):
+        score+=1
+    if has_special(password):
+        score+=1
+    if has_numeric(password):
+        score+=1
+    if above_ten_characters(password):
+        score+=1
+    if score == 4:
+        score+=1
+    if recurrence_limit(password):
+        score -=1
+    return score
+
+
 def main():
     """
     Main Function
     """
+    password_strength = 0
+    password = input("Please enter password: ")
+
+    print(get_strength(password))
     print("Error! Code not yet complete!")
 
 if __name__ == "__main__":
