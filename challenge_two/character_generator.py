@@ -6,6 +6,9 @@ import random
 ACCEPTABLE_CHARS = list(string.ascii_letters + string.digits + string.punctuation)
 
 def get_random_char():
+    """
+    This function generates a random character
+    """
     index = random.randrange(0, len(ACCEPTABLE_CHARS))
     return ACCEPTABLE_CHARS[index]
 
