@@ -1,0 +1,3 @@
+Hello!
+Sorry for so many test folders and delete me text files.
+There have been issues linking github accounts with vscode, and suddenly everything pushed at once.
