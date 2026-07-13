@@ -1,0 +1,14 @@
+A Running List of Challenges for VioletCat39's Summer Coding Challenegs Workshop
+
+1. Password Strength Checker
+2. Password Generator
+3. Caesar Cipher, Vigenere Cipher, and XOR Encryption Tool
+4. File Encryption Tool
+5. URL Safety Checker
+TBC...
+
+I will also be moving to Java soon after I get some of these smaller challenges done,
+The reason being the big challenge which will likely be moved to a seperate repo.
+I plan on making a virtual card game deck builder for some of my favorite trading card games, just for funsies (not saying which ones yet)
+This is partially as a fun way to remember object oriented code design and to also help my one friend who can't build a deck for the life of him.
+I may also try my hand at GUI (I'm not good at graphics but I'll give it a try).
