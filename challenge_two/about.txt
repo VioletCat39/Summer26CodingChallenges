@@ -1,0 +1,7 @@
+Password Generator Challenge:
+Now that the password security checker has been created, let's make a password generator to generate a random and secure password!
+
+For this challenge, I am outlining the following parameters:
+The password must be 12 to 24 characters in length (length determined by either input or random number generation)
+The password must have one uppercase, one lowercase, one number, and one special character.
+No character must repeat one after another (ie, no two characters in a row are the same).
