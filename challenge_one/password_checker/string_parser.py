@@ -8,7 +8,7 @@ def parse_string(line):
     character_list = []
     for item in line:
         character_list.append(item)
-    return character_list;
+    return character_list
 
 def main():
     """
