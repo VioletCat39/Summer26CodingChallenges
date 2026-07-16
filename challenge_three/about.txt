@@ -1,0 +1,3 @@
+This Demo will be filled with different forms of encryption methods, from a basic caesar cipher to the vignierre to the XOR encryption method.
+Each method will be put in its own folder, with a document describing how the cipher works and any interesting information I find!
+
