@@ -1,0 +1,19 @@
+This code was taken from a demo I had to make for another project, and since I haven't posted it to Github, I'll post it here and now.
+I also have a video explaining it, similar to the Machien Learning challenge I did when I was younger, but the video was application specific, so this will be the only thing I upload from it.
+The code explains the thoguht process and logic behind the program, so here is how the caesar cipher works:
+
+Image two alphabets on a disk, lined up like so:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+Now, in order to encrypt a message, we shift the alphabet below by a key value.
+So, let's say our key is 3, our alphabet would be:
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+DEFGHIJKLMNOPQRSTUVWXYZABC
+
+So if our first letter is A, we use the letter below corresponding to A, which is D.
+If our next letter if B, we use the corresponding letter below B, which is E, and so on and so forth.
+
+Then, to decrypt, we shift the alphabet the opposite direction by the key pair.
+
+The demos attached in this folder help to explain this shifting better, as well as the logic behind the shifting mechanism.
